@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}Welcome - Blog Admin{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h2 class="card-title">Welcome to Blog Admin</h2>
+                <p class="card-text lead">
+                    This is a role-based blog system with admin management via Django Admin.
+                </p>
+                
+                <hr class="my-4">
+                
+                <h5>Get Started:</h5>
+                <div class="d-grid gap-2 d-sm-flex">
+                    <a href="{% url 'rbac_app:login' %}" class="btn btn-primary btn-lg">Sign In</a>
+                    <a href="{% url 'rbac_app:register' %}" class="btn btn-success btn-lg">Create Account</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"> Manage Everything in Django Admin</h5>
+                <p class="card-text text-muted">
+                    As a superuser, go to <strong>/admin/</strong> to manage:
+                </p>
+                <ul class="list-unstyled ms-3">
+                    <li>✓ Users and their roles</li>
+                    <li>✓ Blog posts (create, edit, publish, delete)</li>
+                    <li>✓ Roles management (Reader, Editor, Author)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
